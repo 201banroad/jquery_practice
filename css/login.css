@@ -10,10 +10,9 @@
 }
 
 /* 強調色 */
-.accent{
-	color: white;
-    background: #40c89a;
-}
+/* .accent{
+	
+} */
 
 /* コンテンツ */
 #contents{
@@ -79,7 +78,11 @@
 
 /* ボタン */
 button{
+	color: white;
+    background: #40c89a;
 	cursor:pointer;
+	border: 1px solid #b7b6b6;
+	border-radius:5px;
 }
 
 
@@ -96,8 +99,7 @@ button{
 #addUser {
 	font-size: 20px;
 	display:block;
-	border: 1px solid #b7b6b6;
-	border-radius:5px;
+	
 }
 
 .subBlk{
@@ -148,3 +150,22 @@ table th,table td{
 .focusBg{
 	background:#e1ffe1;
 }
+
+.dialogForm {
+	width:80%;
+}
+
+.dialogForm p {
+	color:green;
+}
+
+.dialogForm form{
+	display: flex;
+  	flex-direction: column;
+}
+
+.dialogForm button {
+	width: 40%;
+	margin:10px auto;
+}
+
