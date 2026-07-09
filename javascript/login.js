@@ -9,7 +9,7 @@ $(function () {
         area.slideToggle();
     });
 
-    
+
     //ユーザー追加
     const addUser = $("#addUser");
     let userCount = 6;
@@ -26,7 +26,16 @@ $(function () {
        
     });
 
-    
+    $("#signup").click(function(){
+        $(".modal-back").show();
+        $(".dialogForm").show();
+    });
+
+    $(".delete").click(function(){
+        $(".modal-back").hide();
+        $(".dialogForm").hide();
+    });
+
 
 });
 

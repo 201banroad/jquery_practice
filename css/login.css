@@ -147,8 +147,39 @@ table th,table td{
 	background:#e1ffe1;
 }
 
+/* .modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+} */
+
+/* 背景 */
+.modal-back {
+    display: none;
+    position: fixed;
+	z-index: 998;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
 .dialogForm {
-	width:80%;
+	display:none;
+	/* 真ん中に表示 */
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	
+	width: 400px;
+    height: 350px;
+	z-index: 999;
+	padding: 50px;
+	background:rgb(255, 254, 254);
 }
 
 .dialogForm form{
@@ -173,7 +204,7 @@ table th,table td{
   border: none;
   padding: 0;
   color:#137655;
-  font-size:30px;
+  font-size: 50px;
   display:block;
   margin-left: auto;
 }
