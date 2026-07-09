@@ -1,0 +1,36 @@
+// 画面表示時のイベント
+$(function () {
+    
+    const openBtn = $("#openBtn");
+    const area = $("#subArea");
+
+    //エリア開閉
+    openBtn.click(function(){
+        area.slideToggle();
+    });
+
+    
+    //ユーザー追加
+    const addUser = $("#addUser");
+    let userCount = 6;
+
+    addUser.click(function(){
+
+        $(".subBlk tbody").append(`
+            <tr>
+				<td>test_user_${userCount}</td>
+				<td>テストユーザー${userCount}</td>
+    		</tr>
+        `);
+        userCount++;
+       
+    });
+
+    
+
+});
+
+
+
+
+    

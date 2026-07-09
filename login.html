@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- meta -->
+		<meta charset="utf-8">
+		
+		<!-- css -->
+		<link rel="stylesheet" href="css/login.css">
+		
+		<!-- JS -->
+		<script type="text/javascript" src="javascript/jquery-3.6.2.min.js"></script>
+		<script type="text/javascript" src="javascript/login.js"></script>
+		<script type="text/javascript" src="javascript/test1.js"></script>
+
+		
+		<!-- 画面名 -->
+		<title>ログイン画面</title>
+
+	</head>
+	<body>
+		
+		<!-- 画面名 -->
+		<div id="pgTitle" class="accent">ログイン</div>
+		
+		<!-- コンテンツ -->
+		<div id="contents">
+			
+			<!-- ログインID入力欄 -->
+			<label class="inptArea">
+				<span class="inptHeader">ログインID</span>
+ 				<input type="text" class="inpt" id="login_id" name="login_id" placeholder="入力してください" />
+ 			</label>
+			
+			<!-- パスワード入力欄 -->
+			<label class="inptArea">
+				<span class="inptHeader">パスワード</span>
+				<input type="password" class="inpt" id="password" name="password" placeholder="入力してください" />
+			</label>
+			
+			<!-- ログインボタン -->
+			<div id="btnArea">
+				<button type="button" id="loginBtn" class="accent">
+					ログイン
+				</button>
+			</div>
+
+			<!-- 開閉ボタン -->
+			<div id="btnArea">
+				<button type="button" id="openBtn" class="accent">
+					開閉▼
+				</button>
+			</div>
+			
+			<!-- 新規登録ボタン -->
+			<button id="signup" class="accent" type="button">
+				新規登録
+			</button>
+			
+			<!-- サブコンテンツ -->
+			<div id="subArea">
+
+				<!-- 追加ボタン -->
+				<button id="addUser" class="accent" type="button">
+					追加
+				</button>
+				
+				
+				<!-- ユーザー一覧 -->
+				<table class="subBlk">
+					<thead>
+						<tr>
+							<th>ユーザーID</th>
+							<th>ユーザー名</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+						<tr>
+							<td>test_user_1</td>
+							<td>テストユーザー1</td>
+						</tr>
+						<tr>
+							<td>test_user_2</td>
+							<td>テストユーザー2</td>
+						</tr>
+						<tr>
+							<td>test_user_3</td>
+							<td>テストユーザー3</td>
+						</tr>
+						<tr>
+							<td>test_user_4</td>
+							<td>テストユーザー4</td>
+						</tr>
+						<tr>
+							<td>test_user_5</td>
+							<td>テストユーザー5</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<!-- ニュース -->
+				<div class="subBlk" id="newsArea">
+					<p>ニュース</p>
+					<ul>
+						<li>ニュース</li>
+						<li>ニュース</li>
+						<li>ニュース</li>
+						<li>ニュース</li>
+						<li>ニュース</li>
+						<li>ニュース</li>
+						<li>ニュース</li>
+						<li>ニュース</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
