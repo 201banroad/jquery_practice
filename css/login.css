@@ -79,9 +79,7 @@
 
 /* ボタン */
 button{
-	
 	cursor:pointer;
-	
 }
 
 
@@ -153,15 +151,30 @@ table th,table td{
 	width:80%;
 }
 
-
-
 .dialogForm form{
 	display: flex;
   	flex-direction: column;
+	
 }
 
-.dialogForm button {
+.dialogForm input{
+	padding: 10px 0;
+	margin-bottom:20px;
+}
+
+.dialogForm button[type="submit"] {
 	width: 40%;
 	margin:10px auto;
+	padding: 10px 0;
+}
+
+.delete {
+  background: none;
+  border: none;
+  padding: 0;
+  color:#137655;
+  font-size:30px;
+  display:block;
+  margin-left: auto;
 }
 
