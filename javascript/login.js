@@ -12,7 +12,7 @@ $(function () {
 
     //ユーザー追加
     const addUser = $("#addUser");
-    let userCount = 6;
+    let userCount = $(".subBlk tbody tr").length +1;
 
     addUser.click(function(){
 
@@ -39,7 +39,6 @@ $(function () {
     $("form").submit(function(e){
         e.preventDefault();
 
-        if()
     })
 
 
