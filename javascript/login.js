@@ -32,9 +32,15 @@ $(function () {
     });
 
     $(".delete").click(function(){
-        $(".modal-back").hide();
+        $(".modal-back").hide   ();
         $(".dialogForm").hide();
     });
+
+    $("form").submit(function(e){
+        e.preventDefault();
+
+        if()
+    })
 
 
 });

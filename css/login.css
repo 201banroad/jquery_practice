@@ -55,12 +55,12 @@
     height: 60px;
 }
 
-#btnArea {
+#btnArea{
 	display: flex;
     justify-content: center; /* 横方向中央 */
 }
 
-#btnArea #openBtn {
+#btnArea #openBtn{
 	width: 50px;
 	margin-top:30px;
 }
@@ -74,15 +74,12 @@
     position: fixed;
     bottom: 35px;
     right: 20px;
-	
 }
 
 /* ボタン */
 button{
 	cursor:pointer;
 }
-
-
 
 /* サブコンテンツ */
 #subArea{
@@ -93,7 +90,7 @@ button{
 	border-radius: 10px;
 }
 
-#addUser {
+#addUser{
 	font-size: 20px;
 	display:block;
 }
@@ -108,9 +105,11 @@ table{
 	border-collapse:collapse;
 	background:white;
 }
+
 table th,table td{
 	border:1px solid #d8d8d8;
 }
+
 .select_user_row{
 	background:#e2f5e2;
 }
@@ -120,6 +119,7 @@ table th,table td{
 	font-weight:bold;
 	text-align:center;
 }
+
 /* ニュース */
 #newsArea ul{
 	border:1px solid #d8d8d8;
@@ -134,32 +134,24 @@ table th,table td{
 .input_nn{
 	background:#ffbdbd;
 }
+
 /* ログインボタン:非活性 */
 #loginBtn:disabled{
 	background:gray;
 }
+
 /* フォーカス時アウトライン */
 .focusBorder{
 	outline:2px solid black !important;
 }
+
 /* フォーカス時太字 */
 .focusBg{
 	background:#e1ffe1;
 }
 
-/* .modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.5);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-} */
-
 /* 背景 */
-.modal-back {
+.modal-back{
     display: none;
     position: fixed;
 	z-index: 998;
@@ -167,7 +159,7 @@ table th,table td{
     background: rgba(0,0,0,0.5);
 }
 
-.dialogForm {
+.dialogForm{
 	display:none;
 	/* 真ん中に表示 */
 	position: fixed;
@@ -193,13 +185,13 @@ table th,table td{
 	margin-bottom:20px;
 }
 
-.dialogForm button[type="submit"] {
+.dialogForm button[type="submit"]{
 	width: 40%;
 	margin:10px auto;
 	padding: 10px 0;
 }
 
-.delete {
+.delete{
   background: none;
   border: none;
   padding: 0;
