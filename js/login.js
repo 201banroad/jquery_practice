@@ -1,6 +1,6 @@
 // 画面表示時のイベント
-$(function (){
-   toggleUserArea();
+$(function(){
+    toggleUserArea();
 
     plusUser();
 
@@ -45,6 +45,7 @@ function closeRegist(){
     $(".delete").click(function(){
         $(".modal-back").hide();
         $(".dialogForm").hide();
+        $("form")[0].reset();
     });
 }
 
