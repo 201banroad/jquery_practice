@@ -1,18 +1,18 @@
 // 画面表示時のイベント
 $(function (){
-    toggleArea();
+   toggleUserArea();
 
     plusUser();
 
-    openForm();
+    openRegist();
 
-    closeForm();
+    closeRegist();
 
-    formCheck();
+    checkRegist();
 });
 
 //エリア開閉
-function toggleArea(){
+function toggleUserArea(){
     $("#openBtn").click(function(){
         $("#subArea").slideToggle();
     });
@@ -33,7 +33,7 @@ function plusUser(){
 }
 
 // 新規登録ボタンクリックで新規登録フォームを表示
-function openForm(){
+function openRegist(){
     $("#signup").click(function(){
         $(".modal-back").show();
         $(".dialogForm").show();
@@ -41,7 +41,7 @@ function openForm(){
 }
 
 // Xボタンクリックで新規登録フォームを非表示
-function closeForm(){
+function closeRegist(){
     $(".delete").click(function(){
         $(".modal-back").hide();
         $(".dialogForm").hide();
@@ -49,7 +49,7 @@ function closeForm(){
 }
 
 // フォームのsubmitボタンが押されたら、未入力チェック
-function formCheck(){
+function checkRegist(){
     $("form").submit(function(e){
         e.preventDefault();
         const registId = $("#registId").val()
