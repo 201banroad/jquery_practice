@@ -45,13 +45,13 @@ function closeRegist(){
     $(".delete").click(function(){
         $(".modal-back").hide();
         $(".dialogForm").hide();
-        $("form")[0].reset();
+        $("#registForm")[0].reset();
     });
 }
 
 // フォームのsubmitボタンが押されたら、未入力チェック
 function checkRegist(){
-    $("form").submit(function(e){
+    $("#registForm").submit(function(e){
         e.preventDefault();
         const registId = $("#registId").val()
         const registPassword = $("#registPassword").val()
