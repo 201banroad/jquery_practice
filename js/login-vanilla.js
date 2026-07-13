@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>テストユーザー${userCount}</td>
             </tr>    
         `) 
-        userCount++;
     });
 
     // マウスホバー時、対象ユーザーの色を緑に
