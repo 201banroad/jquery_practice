@@ -109,6 +109,10 @@ button{
 	background-color:#e1ffe1;
 }
 
+.empty-login-form {
+	background-color:#ffbdbd;
+}
+
 /* ユーザー一覧 */
 table{
 	border-collapse:collapse;

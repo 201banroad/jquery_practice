@@ -17,6 +17,8 @@ $(function (){
     autoFocus();
 
     hoverUser();
+
+    emptyLoginForm();
 });
 
 //エリア開閉
@@ -112,8 +114,18 @@ function hoverUser() {
         })
 }
 
+// 未入力だった場合、フォームの背景を赤く変更
+function emptyLoginForm() {
 
-
-
-
+    // 初期表示時にそれぞれチェックしている
+    $(".inpt").each(function() {
+        $(this).toggleClass("empty-login-form",
+        $(this).val().trim() === ""
+    )});
     
+    // 入力されるたびにフォームの空白チェック
+    $(".inpt").on("input", function() {
+        $(this).toggleClass("empty-login-form",
+        $(this).val().trim() === ""
+    )});
+}
