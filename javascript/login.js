@@ -1,5 +1,5 @@
 // 画面表示時のイベント
-$(function (){
+$(function () {
     toggleArea();
 
     plusUser();
@@ -22,16 +22,16 @@ $(function (){
 });
 
 //エリア開閉
-function toggleArea(){
-    $("#openBtn").click(function(){
+function toggleArea() {
+    $("#openBtn").click(function() {
         $("#subArea").slideToggle();
     });
 }
 
 //行数を取得してユーザーの追加 
-function plusUser(){
+function plusUser() {
     let userCount = $(".subBlk tbody tr").length +1;
-    $("#addUser").click(function(){
+    $("#addUser").click(function() {
         $(".subBlk tbody").append(`
             <tr>
                 <td>test_user_${userCount}</td>
@@ -43,23 +43,23 @@ function plusUser(){
 }
 
 // 新規登録ボタンクリックで新規登録フォームを表示
-function openSignupForm(){
-    $("#signup").click(function(){
+function openSignupForm() {
+    $("#signup").click(function() {
         $(".modal-back").show();
         $(".dialogForm").show();
     });
 }
 
 // Xボタンクリックで新規登録フォームを非表示
-function closeSignupForm(){
-    $(".delete").click(function(){
+function closeSignupForm() {
+    $(".delete").click(function() {
         $(".modal-back").hide();
         $(".dialogForm").hide();
     });
 }
 
 // フォームのsubmitボタンが押されたら、未入力チェック
-function checkSignupForm(){
+function checkSignupForm() {
     $("form").submit(function(e){
         e.preventDefault();
         const registId = $("#registId").val()
@@ -78,8 +78,8 @@ function checkSignupForm(){
 }
 
 // ダブルクリックしたユーザーの行の色を緑に変更
-function userGreen(){
-    $(".subBlk tbody").on("dblclick", "tr", function(){
+function userGreen() {
+    $(".subBlk tbody").on("dblclick", "tr", function() {
         $(".subBlk tbody tr").removeClass("select-green");
         $(this).toggleClass("select-green");
     });
@@ -87,8 +87,8 @@ function userGreen(){
 
 // ダブルクリックしたユーザーの情報を取得してログインフォームに表示
 // パスワードは、何行目のユーザーかを取得してフォームに表示
-function userDisplay(){
-    $(".subBlk tbody").on("dblclick", "tr", function(){
+function userDisplay() {
+    $(".subBlk tbody").on("dblclick", "tr", function() {
         const loginId = $(this).find("td").eq(0).text();
         $("#login_id").val(loginId);
         const lineNumber = $(this).index() + 1;
