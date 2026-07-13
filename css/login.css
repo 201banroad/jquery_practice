@@ -105,6 +105,10 @@ button{
 	background-color:#1cb11ab5;
 }
 
+.hover-user {
+	background-color:#e1ffe1;
+}
+
 /* ユーザー一覧 */
 table{
 	border-collapse:collapse;

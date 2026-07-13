@@ -13,6 +13,10 @@ $(function (){
     userGreen();
 
     userDisplay();
+
+    autoFocus();
+
+    hoverUser();
 });
 
 //エリア開閉
@@ -88,6 +92,24 @@ function userDisplay(){
         const lineNumber = $(this).index() + 1;
         $("#password").val("password" + lineNumber);
     });
+}
+
+// ページ表示時に入力欄にフォーカス
+function autoFocus() {
+    $("#login_id").focus();
+}
+
+// マウスが乗った時に色変更
+function hoverUser() {
+    $(".subBlk tbody")
+        .on("mouseenter", "tr",
+        function() {
+            $(this).addClass("hover-user")
+        })
+        .on("mouseleave", "tr",
+        function() {
+            $(this).removeClass("hover-user")
+        })
 }
 
 
