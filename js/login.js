@@ -40,7 +40,7 @@ function openRegist() {
     });
 }
 
-// 新規登録フォームを非表示するメソッド
+// 新規登録フォームを非表示して入力値を初期化するメソッド
 function hideRegist() {
     $(".modal-back").hide();
     $(".dialogForm").hide();
