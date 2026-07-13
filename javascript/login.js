@@ -20,7 +20,9 @@ $(function (){
 
     emptyLoginForm();
 
-    signupLimitLength()
+    signupLimitLength();
+
+    setLoginButtonEvent();
 });
 
 //エリア開閉
@@ -139,4 +141,22 @@ function signupLimitLength() {
             $(this).val($(this).val().substring(0,20));
         }
     });
-} 
+}
+
+// フォーム入力時はボタンを活性化（普段はHTML側でボタン非活性）
+function updateLoginButton() {
+    // 全部が空白じゃなければtrue
+    const isFilled = $(".inpt").toArray().every(input =>
+        $(input).val().trim() !== ""
+    );
+
+    // isFilledがtrueならdisabledがfalseになり、ボタンが有効になる
+    $("#loginBtn").prop("disabled", !isFilled);;
+}
+
+// 入力時にボタン状態更新処理を実行する
+function setLoginButtonEvent() {
+    $(".inpt").on("input", function() {
+        updateLoginButton();
+    });
+}
