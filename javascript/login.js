@@ -19,6 +19,8 @@ $(function (){
     hoverUser();
 
     emptyLoginForm();
+
+    signupLimitLength()
 });
 
 //エリア開閉
@@ -129,3 +131,12 @@ function emptyLoginForm() {
         $(this).val().trim() === ""
     )});
 }
+
+// ログインフォームの文字数制限
+function signupLimitLength() {
+    $(".inpt").on("input", function() {
+        if($(this).val().length > 20) {
+            $(this).val($(this).val().substring(0,20));
+        }
+    });
+} 
