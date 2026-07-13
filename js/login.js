@@ -4,11 +4,11 @@ $(function() {
 
     plusUser();
 
-    openRegist();
+    openSignupForm();
 
-    closeRegist();
+    closeSignupForm();
 
-    checkRegist();
+    checkSignupForm();
 });
 
 //エリア開閉
@@ -33,7 +33,7 @@ function plusUser() {
 }
 
 // 新規登録ボタンクリックで新規登録フォームを表示
-function openRegist() {
+function openSignupForm() {
     $("#signup").click(function() {
         $(".modal-back").show();
         $(".dialogForm").show();
@@ -41,21 +41,21 @@ function openRegist() {
 }
 
 // 新規登録フォームを非表示して入力値を初期化するメソッド
-function hideRegist() {
+function hideSignupForm() {
     $(".modal-back").hide();
     $(".dialogForm").hide();
     $("#registForm")[0].reset();
 }
 
 // Xボタンクリックで新規登録フォームを非表示
-function closeRegist() {
+function closeSignupForm() {
     $(".delete").click(function() {
-        hideRegist();
+        hideSignupForm();
     });
 }
 
 // フォームのsubmitボタンが押されたら、未入力チェック
-function checkRegist() {
+function checkSignupForm() {
     $("#registForm").submit(function(e){
         e.preventDefault();
         const registId = $("#registId").val()
