@@ -10,9 +10,7 @@ $(function() {
 
     checkSignupForm();
 
-    highlightUser();
-
-    displayUser();
+    LoadSelectedUser();
 });
 
 //エリア開閉
@@ -80,18 +78,14 @@ function checkSignupForm() {
     });
 }
 
-// ダブルクリックしたユーザーの行の色を緑に変更
-function highlightUser(){
+function LoadSelectedUser() {
     $(".subBlk tbody").on("dblclick", "tr", function(){
+        // ダブルクリックしたユーザーの行の色を緑に変更
         $(".subBlk tbody tr").removeClass("select-highlight");
         $(this).toggleClass("select-highlight");
-    });
-}
 
-// ダブルクリックしたユーザーの情報を取得してログインフォームに表示
-// パスワードは、何行目のユーザーかを取得してフォームに表示
-function displayUser(){
-    $(".subBlk tbody").on("dblclick", "tr", function(){
+        // ダブルクリックしたユーザーの情報を取得してログインフォームに表示
+        // パスワードは、何行目のユーザーかを取得してフォームに表示
         const loginId = $(this).find("td").eq(0).text();
         $("#login_id").val(loginId);
         const lineNumber = $(this).index() + 1;
