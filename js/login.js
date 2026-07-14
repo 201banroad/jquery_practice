@@ -10,9 +10,9 @@ $(function() {
 
     checkSignupForm();
 
-    userGreen();
+    highlightUser();
 
-    userDisplay();
+    displayUser();
 });
 
 //エリア開閉
@@ -81,7 +81,7 @@ function checkSignupForm() {
 }
 
 // ダブルクリックしたユーザーの行の色を緑に変更
-function userGreen(){
+function highlightUser(){
     $(".subBlk tbody").on("dblclick", "tr", function(){
         $(".subBlk tbody tr").removeClass("select-green");
         $(this).toggleClass("select-green");
@@ -90,7 +90,7 @@ function userGreen(){
 
 // ダブルクリックしたユーザーの情報を取得してログインフォームに表示
 // パスワードは、何行目のユーザーかを取得してフォームに表示
-function userDisplay(){
+function displayUser(){
     $(".subBlk tbody").on("dblclick", "tr", function(){
         const loginId = $(this).find("td").eq(0).text();
         $("#login_id").val(loginId);
