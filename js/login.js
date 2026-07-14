@@ -9,6 +9,10 @@ $(function() {
     closeSignupForm();
 
     checkSignupForm();
+
+    userGreen();
+
+    userDisplay();
 });
 
 //エリア開閉
@@ -73,5 +77,24 @@ function checkSignupForm() {
             alert("新規登録しました");
             hideRegist();
         }
+    });
+}
+
+// ダブルクリックしたユーザーの行の色を緑に変更
+function userGreen(){
+    $(".subBlk tbody").on("dblclick", "tr", function(){
+        $(".subBlk tbody tr").removeClass("select-green");
+        $(this).toggleClass("select-green");
+    });
+}
+
+// ダブルクリックしたユーザーの情報を取得してログインフォームに表示
+// パスワードは、何行目のユーザーかを取得してフォームに表示
+function userDisplay(){
+    $(".subBlk tbody").on("dblclick", "tr", function(){
+        const loginId = $(this).find("td").eq(0).text();
+        $("#login_id").val(loginId);
+        const lineNumber = $(this).index() + 1;
+        $("#password").val("password" + lineNumber);
     });
 }

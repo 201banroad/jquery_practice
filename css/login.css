@@ -100,6 +100,11 @@ button{
     width: calc(50% - 3px);
 }
 
+/* jqueryでHTMLにつけたり外したりする用 */
+.select-green{
+	background-color:#1cb11ab5;
+}
+
 /* ユーザー一覧 */
 table{
 	border-collapse:collapse;
