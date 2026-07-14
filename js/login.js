@@ -12,7 +12,7 @@ $(function() {
 
     loadSelectedUser();
 
-    LoginFormAutoFocus();
+    loginFormAutoFocus();
 
     hoverUser();
 
@@ -104,7 +104,7 @@ function loadSelectedUser() {
 }
 
 // ページ表示時に入力欄にフォーカス
-function LoginFormAutoFocus() {
+function loginFormAutoFocus() {
     $("#login_id").focus();
 }
 
