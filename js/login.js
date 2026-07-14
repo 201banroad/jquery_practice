@@ -83,8 +83,8 @@ function checkSignupForm() {
 // ダブルクリックしたユーザーの行の色を緑に変更
 function highlightUser(){
     $(".subBlk tbody").on("dblclick", "tr", function(){
-        $(".subBlk tbody tr").removeClass("select-green");
-        $(this).toggleClass("select-green");
+        $(".subBlk tbody tr").removeClass("select-highlight");
+        $(this).toggleClass("select-highlight");
     });
 }
 

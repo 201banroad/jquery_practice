@@ -101,7 +101,7 @@ button{
 }
 
 /* jqueryでHTMLにつけたり外したりする用 */
-.select-green{
+.select-highlight{
 	background-color:#1cb11ab5;
 }
 
