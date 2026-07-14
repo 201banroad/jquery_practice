@@ -10,7 +10,7 @@ $(function() {
 
     checkSignupForm();
 
-    LoadSelectedUser();
+    loadSelectedUser();
 });
 
 //エリア開閉
@@ -78,7 +78,7 @@ function checkSignupForm() {
     });
 }
 
-function LoadSelectedUser() {
+function loadSelectedUser() {
     $(".subBlk tbody").on("dblclick", "tr", function(){
         // ダブルクリックしたユーザーの行の色を緑に変更
         $(".subBlk tbody tr").removeClass("select-highlight");
