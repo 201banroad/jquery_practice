@@ -137,7 +137,7 @@ function emptyLoginForm() {
 function loginLimitLength() {
     $(".inpt").on("input", function() {
         if($(this).val().length > 20) {
-            $(this).val($(this).val().substring(0,20));
+            $(this).val($(this).val().substring(0, 20));
         }
     });
 }
