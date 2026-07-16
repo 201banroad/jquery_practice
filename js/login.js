@@ -56,7 +56,7 @@ function openSignupForm() {
 function hideSignupForm() {
     $(".modal-back").hide();
     $(".dialogForm").hide();
-    $("#registForm")[0].reset();
+    $("#registerererForm")[0].reset();
 }
 
 // Xボタンクリックで新規登録フォームを非表示
@@ -68,22 +68,22 @@ function closeSignupForm() {
 
 // フォームのsubmitボタンが押されたら、未入力チェック
 function checkSignupForm() {
-    $("#registForm").submit(function(e){
+    $("#registerForm").submit(function(e){
         e.preventDefault();
-        const registId = $("#registId").val()
-        const registPassword = $("#registPassword").val()
-        const registConfirm = $("#registConfirm").val()
+        const registerId = $("#registerId").val()
+        const registerPassword = $("#registerPassword").val()
+        const registerConfirm = $("#registerConfirm").val()
         if (
-            registId.trim() === "" ||
-            registPassword.trim() === "" ||
-            registConfirm.trim() === ""
-        ){
+            registerId.trim() === ""
+            || registerPassword.trim() === ""
+            || registerConfirm.trim() === ""
+        ) {
             alert("未入力の項目があります");
-        } else if (registPassword != registConfirm){
+        } else if (registerPassword != registerConfirm){
             alert("パスワードと確認用パスワードの値が違います");
         } else {
             alert("新規登録しました");
-            hideRegist();
+            hideSignupForm();
         }
     });
 }
