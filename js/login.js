@@ -110,15 +110,11 @@ function loginFormAutoFocus() {
 
 // マウスが乗った時に色変更
 function hoverUser() {
-    $(".subBlk tbody")
-        .on("mouseenter", "tr",
-        function() {
-            $(this).addClass("hover-user")
-        })
-        .on("mouseleave", "tr",
-        function() {
-            $(this).removeClass("hover-user")
-        })
+    $(".subBlk tbody").on("mouseenter", "tr", function() {
+        $(this).addClass("hover-user");
+    }).on("mouseleave", "tr", function() {
+        $(this).removeClass("hover-user");
+    })
 }
 
 // 未入力だった場合、フォームの背景を赤く変更
