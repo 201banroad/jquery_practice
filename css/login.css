@@ -100,6 +100,19 @@ button{
     width: calc(50% - 3px);
 }
 
+/* jqueryでHTMLにつけたり外したりする用 */
+.select-highlight{
+	background-color:#1cb11ab5;
+}
+
+.hover-user {
+	background-color:#e1ffe1;
+}
+
+.empty-login-form {
+	background-color:#ffbdbd;
+}
+
 /* ユーザー一覧 */
 table{
 	border-collapse:collapse;
