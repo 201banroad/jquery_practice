@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 要素をクリックしたら、エリアが開く
     document.getElementById('openBtn').addEventListener('click', function() {
         const area = document.getElementById('subArea');
-        if(area.style.display ==='none') {
+        if (area.style.display ==='none') {
             area.style.display ='block';
         } else {
             area.style.display = 'none';
