@@ -56,7 +56,7 @@ function openSignupForm() {
 function hideSignupForm() {
     $(".modal-back").hide();
     $(".dialogForm").hide();
-    $("#registerererForm")[0].reset();
+    $("#registerForm")[0].reset();
 }
 
 // Xボタンクリックで新規登録フォームを非表示
@@ -79,7 +79,7 @@ function checkSignupForm() {
             || registerConfirm.trim() === ""
         ) {
             alert("未入力の項目があります");
-        } else if (registerPassword != registerConfirm){
+        } else if (registerPassword !== registerConfirm){
             alert("パスワードと確認用パスワードの値が違います");
         } else {
             alert("新規登録しました");
