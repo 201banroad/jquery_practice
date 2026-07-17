@@ -68,7 +68,7 @@ function closeSignupForm() {
 
 // フォームのsubmitボタンが押されたら、未入力チェック
 function checkSignupForm() {
-    $("#registerForm").submit(function(e){
+    $("#registerForm").submit(function(e) {
         e.preventDefault();
         const registerId = $("#registerId").val()
         const registerPassword = $("#registerPassword").val()
@@ -79,7 +79,7 @@ function checkSignupForm() {
             || registerConfirm.trim() === ""
         ) {
             alert("未入力の項目があります");
-        } else if (registerPassword !== registerConfirm){
+        } else if (registerPassword !== registerConfirm) {
             alert("パスワードと確認用パスワードの値が違います");
         } else {
             alert("新規登録しました");
@@ -136,7 +136,7 @@ function emptyLoginForm() {
 // ログインフォームの文字数制限
 function loginLimitLength() {
     $(".inpt").on("input", function() {
-        if($(this).val().length > 20) {
+        if ($(this).val().length > 20) {
             $(this).val($(this).val().substring(0, 20));
         }
     });
