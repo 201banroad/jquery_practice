@@ -37,14 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
         `) 
     });
 
-    // マウスホバー時、対象ユーザーの色を緑に
-    const userRows = document.querySelectorAll('.subBlk tbody tr');
-    userRows.forEach(userRow => {
-        userRow.addEventListener('mouseenter', () => {
-            userRow.classList.add('select_user_row');
-        });
-        userRow.addEventListener('mouseleave', () => {
-            userRow.classList.remove('select_user_row');
-        });
+    // マウスオーバー時、対象ユーザーの色を緑にイベントデリゲーションで追加要素にもCSSが付くように
+    const tbody = document.querySelector('.subBlk tbody');
+
+    tbody.addEventListener('mouseover', (event) => {
+        const userRow = event.target.closest('tr');
+        if (!userRow) return;
+
+        userRow.classList.add('hover-user');
+    });
+
+    tbody.addEventListener('mouseout', (event) => {
+        const userRow = event.target.closest('tr');
+        if (!userRow) return;
+        
+        userRow.classList.remove('hover-user');
     });
 });
